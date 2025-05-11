@@ -3,7 +3,7 @@ local function setup_keymaps()
       vim.cmd.vnew()
       vim.cmd.term()
       vim.cmd.wincmd("J")
-      vim.api.nvim_win_set_height(0, 5)
+      vim.api.nvim_win_set_height(0, 10)
   end)
   -- Движение строк
   vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
