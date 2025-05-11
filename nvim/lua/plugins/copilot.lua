@@ -12,10 +12,10 @@ return {
         markdown = true,
       }
       
-      vim.keymap.set("i", "<leader>v", 'copilot#Accept("<CR>")', {
-        silent = true,
+      vim.keymap.set("i", "<C-m>", 'copilot#Accept("<CR>")', {
         expr = true,
         script = true,
+        silent = true,
         replace_keycodes = false,
       })
     end
