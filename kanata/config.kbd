@@ -25,15 +25,14 @@
  j S-]
  k S-0 
  l ]
-
+ ' S-6
  h S-4
  ; S-.
- 
  u S-7
  o S-=
-
  y S-8
  p S-5
+ g S-grv
  e S-3
  r =
  q S-1
@@ -41,6 +40,16 @@
  w S-2
  a S-,
  s [
- f }
+ f S-[
  d S-9
+ z 1
+ x 2
+ c 3
+ v 4
+ b 5
+ n 6
+ m 7
+ , 8
+ . 9
+ / 0
 )
