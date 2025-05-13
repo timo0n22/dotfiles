@@ -1,17 +1,21 @@
 [window]
-  opacity = 0.7
+  opacity = 0.2
+  blur = true
   startup_mode = "Maximized"
   title = "buba"
   decorations = "Buttonless"
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular"}
-  size = 16
+  size = 22
 # Colors (Gruvbox Material Hard Dark)
 
 # Default colors
 [colors.primary]
 background = '#1F1F28'
 foreground = '#DCD7BA'
+
+[colors]
+transparent_background_colors = true
 
 # Normal colors
 [colors.normal]
