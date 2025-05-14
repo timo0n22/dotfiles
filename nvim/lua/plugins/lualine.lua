@@ -1,6 +1,12 @@
 return {
   "nvim-lualine/lualine.nvim",
-  config = function()
-    require("lualine").setup()
-  end
+  opts = {
+    options = {
+      theme = "tokyonight",
+      component_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
+      icons_enabled = true,
+      globalstatus = true,
+    },
+  },
 }

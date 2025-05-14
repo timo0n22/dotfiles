@@ -9,32 +9,36 @@ normal = { family = "Hack Nerd Font Mono", style = "Regular"}
   size = 22
 # Colors (Gruvbox Material Hard Dark)
 
-# Default colors
-[colors.primary]
-background = '#1F1F28'
-foreground = '#DCD7BA'
-
 [colors]
 transparent_background_colors = true
 
-# Normal colors
-[colors.normal]
-black   = '#32302f'
-red     = '#ea6962'
-green   = '#a9b665'
-yellow  = '#d8a657'
-blue    = '#7daea3'
-magenta = '#d3869b'
-cyan    = '#89b482'
-white   = '#d4be98'
+[colors.primary]
+background = "#08080b"
+foreground = "#787c99"
 
-# Bright colors (same as normal colors)
+[colors.cursor]
+cursor = "#787c99"
+
+[colors.selection]
+text = "CellForeground"
+background = "#515c7e"
+
+[colors.normal]
+black = "#363b54"
+red = "#f7768e"
+green = "#41a6b5"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#787c99"
+
 [colors.bright]
-black   = '#32302f'
-red     = '#ea6962'
-green   = '#a9b665'
-yellow  = '#d8a657'
-blue    = '#7daea3'
-magenta = '#d3869b'
-cyan    = '#89b482'
-white   = '#d4be98'
+black = "#363b54"
+red = "#f7768e"
+green = "#41a6b5"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#787c99"

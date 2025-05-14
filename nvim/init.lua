@@ -18,5 +18,3 @@ setup_lazy()
 require("core.options")
 require("lazy").setup("plugins")
 require("core.keymaps").setup()
-
-vim.cmd("colorscheme kanagawa")
