@@ -1,44 +1,35 @@
 [window]
-  opacity = 0.2
-  blur = true
-  startup_mode = "Maximized"
-  title = "buba"
-  decorations = "Buttonless"
+startup_mode = "Maximized"
+title = "buba"
+decorations = "Buttonless"
+
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular"}
-  size = 22
-# Colors (Gruvbox Material Hard Dark)
+size = 22
 
-[colors]
-transparent_background_colors = true
-
+# Default colors
 [colors.primary]
-background = "#08080b"
-foreground = "#787c99"
+background = '#24283b'
+foreground = '#a9b1d6'
 
-[colors.cursor]
-cursor = "#787c99"
-
-[colors.selection]
-text = "CellForeground"
-background = "#515c7e"
-
+# Normal colors
 [colors.normal]
-black = "#363b54"
-red = "#f7768e"
-green = "#41a6b5"
-yellow = "#e0af68"
-blue = "#7aa2f7"
-magenta = "#bb9af7"
-cyan = "#7dcfff"
-white = "#787c99"
+black   = '#32344a'
+red     = '#f7768e'
+green   = '#9ece6a'
+yellow  = '#e0af68'
+blue    = '#7aa2f7'
+magenta = '#ad8ee6'
+cyan    = '#449dab'
+white   = '#9699a8'
 
+# Bright colors
 [colors.bright]
-black = "#363b54"
-red = "#f7768e"
-green = "#41a6b5"
-yellow = "#e0af68"
-blue = "#7aa2f7"
-magenta = "#bb9af7"
-cyan = "#7dcfff"
-white = "#787c99"
+black   = '#444b6a'
+red     = '#ff7a93'
+green   = '#b9f27c'
+yellow  = '#ff9e64'
+blue    = '#7da6ff'
+magenta = '#bb9af7'
+cyan    = '#0db9d7'
+white   = '#acb0d0'

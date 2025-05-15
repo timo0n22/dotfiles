@@ -1,9 +1,9 @@
 local function setup_keymaps()
   vim.keymap.set("n", "<leader>st", function()
-      vim.cmd.vnew()
-      vim.cmd.term()
-      vim.cmd.wincmd("J")
-      vim.api.nvim_win_set_height(0, 10)
+    vim.cmd.vnew()
+    vim.cmd.term()
+    vim.cmd.wincmd("J")
+    vim.api.nvim_win_set_height(0, 10)
   end)
   -- Движение строк
   vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -66,10 +66,33 @@ local function setup_keymaps()
   vim.keymap.set("n", "<F11>", dap.step_into, { desc = "Debug: Step Into" })
   vim.keymap.set("n", "<F12>", dap.step_out, { desc = "Debug: Step Out" })
   vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Debug: Toggle Breakpoint" })
-  vim.keymap.set("n", "<leader>dB", function() dap.set_breakpoint(vim.fn.input("Breakpoint condition: ")) end, { desc = "Debug: Set Conditional Breakpoint" })
+  vim.keymap.set("n", "<leader>dB", function() dap.set_breakpoint(vim.fn.input("Breakpoint condition: ")) end,
+    { desc = "Debug: Set Conditional Breakpoint" })
   vim.keymap.set("n", "<leader>du", dapui.toggle, { desc = "Debug: Toggle UI" })
-  end
+  --splits
+  vim.keymap.set("n", "C-h", "<C-w>h")
+  vim.keymap.set("n", "C-h", "<C-w>h")
+  vim.keymap.set("n", "C-j", "<C-w>j")
+  vim.keymap.set("n", "C-k", "<C-w>k")
+  vim.keymap.set("t", "C-l", "<C-w>l")
+  vim.keymap.set("t", "C-j", "<C-w>j")
+  vim.keymap.set("t", "C-k", "<C-w>k")
+  vim.keymap.set("t", "C-l", "<C-w>l")
+  vim.api.nvim_del_keymap("i", "<Tab>")
+  vim.api.nvim_set_keymap("i", "<C-Space>", 'copilot#Accept("<CR>")', { expr = true, silent = true, noremap = true })
+  vim.keymap.set("n", "<leader>ww", ":set wrap<CR>", { desc = "Включить wrap" })
+  vim.keymap.set("n", "<leader>wn", ":set nowrap<CR>", { desc = "Отключить wrap" })
+  local opts = { noremap = true, silent = true }
+  vim.keymap.set("n", "<leader>lo", "<cmd>Leet menu<CR>", opts)
+  vim.keymap.set("n", "<leader>ll", "<cmd>Leet list<CR>", opts)
+  vim.keymap.set("n", "<leader>ld", "<cmd>Leet desc<CR>", opts)
+  vim.keymap.set("n", "<leader>ls", "<cmd>Leet submit<CR>", opts)
+  vim.keymap.set("n", "<leader>lr", "<cmd>Leet run<CR>", opts)
+  vim.keymap.set("n", "<leader>lg", "<cmd>Leet lang<CR>", opts)
+  vim.keymap.set("n", "<leader>lc", "<cmd>Leet code<CR>", opts)
+  vim.keymap.set("n", "<leader>lb", "<cmd>Leet browser<CR>", opts)
+end
 
-  return {
-	  setup = setup_keymaps
-  }
+return {
+  setup = setup_keymaps
+}
