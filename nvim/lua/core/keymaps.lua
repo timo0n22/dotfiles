@@ -55,7 +55,7 @@ local function setup_keymaps()
   vim.keymap.set("n", "<leader>f", function() lsp.buf.format({ async = true }) end, { desc = "Format file" })
 
   -- NvimTree
-  vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>", { desc = "Toggle file tree" })
+  vim.keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>", { desc = "Toggle file tree" })
   vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>", { desc = "Refresh file tree" })
 
   -- Дебаггер
@@ -71,15 +71,9 @@ local function setup_keymaps()
   vim.keymap.set("n", "<leader>du", dapui.toggle, { desc = "Debug: Toggle UI" })
   --splits
   vim.keymap.set("n", "C-h", "<C-w>h")
-  vim.keymap.set("n", "C-h", "<C-w>h")
   vim.keymap.set("n", "C-j", "<C-w>j")
   vim.keymap.set("n", "C-k", "<C-w>k")
   vim.keymap.set("t", "C-l", "<C-w>l")
-  vim.keymap.set("t", "C-j", "<C-w>j")
-  vim.keymap.set("t", "C-k", "<C-w>k")
-  vim.keymap.set("t", "C-l", "<C-w>l")
-  vim.api.nvim_del_keymap("i", "<Tab>")
-  vim.api.nvim_set_keymap("i", "<C-Space>", 'copilot#Accept("<CR>")', { expr = true, silent = true, noremap = true })
   vim.keymap.set("n", "<leader>ww", ":set wrap<CR>", { desc = "Включить wrap" })
   vim.keymap.set("n", "<leader>wn", ":set nowrap<CR>", { desc = "Отключить wrap" })
   local opts = { noremap = true, silent = true }

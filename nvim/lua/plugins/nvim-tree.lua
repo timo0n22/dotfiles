@@ -6,13 +6,13 @@ return
     require("nvim-tree").setup({
       view = {
         float = {
-          enable = true,
-          quit_on_focus_loss = true,
+          enable = false,
+          quit_on_focus_loss = false,
           open_win_config = {
             relative = "editor",
             border = "rounded",
-            width = 100,
-            height = 20,
+            width = 30,
+            height = 100,
             row = 1,
             col = 1,
           },
