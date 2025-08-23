@@ -2,7 +2,7 @@
 startup_mode = "Maximized"
 title = "buba"
 decorations = "Buttonless"
-opacity = 0.8
+opacity = 0.6
 blur = true
 
 [font]

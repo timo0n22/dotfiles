@@ -22,8 +22,8 @@ local function setup_keymaps()
   -- Навигация по ошибкам
   vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
   vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-  vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-  vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+  vim.keymap.set("n", "<C-S-k>", "<cmd>lnext<CR>zz")
+  vim.keymap.set("n", "<C-S-j>", "<cmd>lprev<CR>zz")
 
   -- Telescope
   vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
@@ -70,10 +70,6 @@ local function setup_keymaps()
     { desc = "Debug: Set Conditional Breakpoint" })
   vim.keymap.set("n", "<leader>du", dapui.toggle, { desc = "Debug: Toggle UI" })
   --splits
-  vim.keymap.set("n", "C-h", "<C-w>h")
-  vim.keymap.set("n", "C-j", "<C-w>j")
-  vim.keymap.set("n", "C-k", "<C-w>k")
-  vim.keymap.set("t", "C-l", "<C-w>l")
   vim.keymap.set("n", "<leader>ww", ":set wrap<CR>", { desc = "Включить wrap" })
   vim.keymap.set("n", "<leader>wn", ":set nowrap<CR>", { desc = "Отключить wrap" })
   local opts = { noremap = true, silent = true }
