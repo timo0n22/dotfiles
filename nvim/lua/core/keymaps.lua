@@ -5,6 +5,13 @@ local function setup_keymaps()
     vim.cmd.wincmd("J")
     vim.api.nvim_win_set_height(0, 10)
   end)
+
+  -- cheatsheet
+  local cheat = require("helpers.cheat")
+
+  vim.keymap.set("n", "<leader>cw", cheat.cheat_word, { desc = "Cheat: word under cursor" })
+  vim.keymap.set("n", "<leader>cq", cheat.cheat_prompt, { desc = "Cheat: custom query" })
+
   -- Движение строк
   vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
   vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
