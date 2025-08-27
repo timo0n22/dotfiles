@@ -12,6 +12,9 @@ local function setup_keymaps()
   vim.keymap.set("n", "<leader>cw", cheat.cheat_word, { desc = "Cheat: word under cursor" })
   vim.keymap.set("n", "<leader>cq", cheat.cheat_prompt, { desc = "Cheat: custom query" })
 
+  -- obsidian
+  vim.keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "New note" })
+
   -- Движение строк
   vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
   vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
