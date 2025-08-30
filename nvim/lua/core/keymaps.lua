@@ -6,12 +6,6 @@ local function setup_keymaps()
     vim.api.nvim_win_set_height(0, 10)
   end)
 
-  -- cheatsheet
-  local cheat = require("helpers.cheat")
-
-  vim.keymap.set("n", "<leader>cw", cheat.cheat_word, { desc = "Cheat: word under cursor" })
-  vim.keymap.set("n", "<leader>cq", cheat.cheat_prompt, { desc = "Cheat: custom query" })
-
   -- obsidian
   vim.keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "New note" })
 

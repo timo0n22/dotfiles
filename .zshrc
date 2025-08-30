@@ -25,6 +25,7 @@ ZSH_HIGHLIGHT_STYLES[alias]='fg=#957fb8'
 ZSH_HIGHLIGHT_STYLES[path]='fg=#98bb6c'
 
 alias n="nvim ."
+alias f="fzf --preview 'bat --style=numbers --color=always {}'"
 
 # Created by `pipx` on 2025-05-13 16:36:47
 export PATH="$PATH:/Users/artemloginov/.local/bin"
