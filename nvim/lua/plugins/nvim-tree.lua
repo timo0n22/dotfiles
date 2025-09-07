@@ -27,7 +27,7 @@ return {
       renderer = {
         highlight_git = true,
         highlight_opened_files = "all",
-        root_folder_label = false,
+        root_folder_label = true,
         indent_markers = { enable = true },
       },
       actions = {

@@ -9,6 +9,10 @@ local function setup_keymaps()
   -- obsidian
   vim.keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "New note" })
 
+  -- on off wrap
+  vim.keymap.set("n", "<leader>wo", ":set wrap<CR>", { desc = "Включить wrap" })
+  vim.keymap.set("n", "<leader>wn", ":set nowrap<CR>", { desc = "Отключить wrap" })
+
   -- Движение строк
   vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
   vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

@@ -25,19 +25,19 @@
 
 [[on-window-detected]]
 if.app-id = "com.apple.finder"
-run = "move-node-to-workspace 1"
+run = "move-node-to-workspace 6"
 
 [[on-window-detected]]
 if.app-id = "org.outline.macos.client"
-run = "move-node-to-workspace 1"
+run = "move-node-to-workspace 6"
 
 [[on-window-detected]]
 if.app-id = "com.electron.ollama"
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
 if.app-id = "md.obsidian"
-run = "move-node-to-workspace 2"
+run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
 if.app-id = "org.alacritty"
@@ -51,3 +51,10 @@ run = "move-node-to-workspace 4"
 if.app-id = "ru.keepcoder.Telegram"
 run = "move-node-to-workspace 5"
 
+[[on-window-detected]]
+if.app-id = "com.electron.dockerdesktop"
+run = "move-node-to-workspace 2"
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.VSCode"
+run = "move-node-to-workspace 2"
