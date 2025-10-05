@@ -8,8 +8,8 @@ return {
           quit_on_focus_loss = true,
           open_win_config = function()
             -- Nearly full screen (no border)
-            local width = math.floor(vim.o.columns * 0.98) -- 98% width
-            local height = math.floor(vim.o.lines * 0.95) -- 95% height
+            local width = math.floor(vim.o.columns * 0.7) -- 98% width
+            local height = math.floor(vim.o.lines * 0.7) -- 95% height
             return {
               relative = "editor",
               border = "none", -- ⬅️ no border
@@ -21,7 +21,7 @@ return {
           end,
         },
         width = function()
-          return math.floor(vim.o.columns * 0.98)
+          return math.floor(vim.o.columns * 0.8)
         end,
       },
       renderer = {

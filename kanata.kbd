@@ -1,0 +1,62 @@
+(defsrc
+  esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12
+
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+
+  lctl lalt lmet           spc            rmet ralt 
+
+)
+
+(defcfg process-unmapped-keys no)
+
+(deflayer  lay
+  esc 🔅   🔆    ✗    ✗    ✗    ✗    ◀◀   ▶⏸   ▶▶   🔇   🔉   🔊
+
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  @tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+
+  @caps a    s    d    f    g    h    j    k    l    ;    '    @ret
+
+  lsft z    x    c    v    b    n    m    ,    .    /   @bsp
+
+  lctl lalt lmet           spc            lctl ralt
+
+)
+
+
+
+(defalias
+
+  bsp (tap-hold 100 200 bspc rsft)
+  caps (tap-hold 100 200 esc lctl)
+  tab (tap-hold 100 200 tab (layer-while-held extended))
+  ret (tap-hold 100 200 ret rctl)
+
+)
+
+
+
+(deflayermap (extended)
+
+  g S-;
+  h =
+  f S-9
+  j S-0
+  d [
+  k ]
+  s S-[
+  l S-]
+  n S--
+  b S-\
+  / \
+  p S-=
+  m -
+
+)

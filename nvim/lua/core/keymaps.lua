@@ -6,9 +6,6 @@ local function setup_keymaps()
     vim.api.nvim_win_set_height(0, 10)
   end)
 
-  -- obsidian
-  vim.keymap.set("n", "<leader>on", ":ObsidianNew<CR>", { desc = "New note" })
-
   -- on off wrap
   vim.keymap.set("n", "<leader>wo", ":set wrap<CR>", { desc = "Включить wrap" })
   vim.keymap.set("n", "<leader>wn", ":set nowrap<CR>", { desc = "Отключить wrap" })
@@ -43,6 +40,7 @@ local function setup_keymaps()
 
   -- Сохранение и выход
   vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
+  vim.keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "Save quit" })
   vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit" })
   vim.keymap.set("n", "<leader>qq", ":qa!<CR>", { desc = "Force quit all" })
 
@@ -66,29 +64,6 @@ local function setup_keymaps()
   vim.keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>", { desc = "Toggle file tree" })
   vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>", { desc = "Refresh file tree" })
 
-  -- Дебаггер
-  local dap = require("dap")
-  local dapui = require("dapui")
-  vim.keymap.set("n", "<F5>", dap.continue, { desc = "Debug: Start/Continue" })
-  vim.keymap.set("n", "<F10>", dap.step_over, { desc = "Debug: Step Over" })
-  vim.keymap.set("n", "<F11>", dap.step_into, { desc = "Debug: Step Into" })
-  vim.keymap.set("n", "<F12>", dap.step_out, { desc = "Debug: Step Out" })
-  vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Debug: Toggle Breakpoint" })
-  vim.keymap.set("n", "<leader>dB", function() dap.set_breakpoint(vim.fn.input("Breakpoint condition: ")) end,
-    { desc = "Debug: Set Conditional Breakpoint" })
-  vim.keymap.set("n", "<leader>du", dapui.toggle, { desc = "Debug: Toggle UI" })
-  --splits
-  vim.keymap.set("n", "<leader>ww", ":set wrap<CR>", { desc = "Включить wrap" })
-  vim.keymap.set("n", "<leader>wn", ":set nowrap<CR>", { desc = "Отключить wrap" })
-  local opts = { noremap = true, silent = true }
-  vim.keymap.set("n", "<leader>lo", "<cmd>Leet menu<CR>", opts)
-  vim.keymap.set("n", "<leader>ll", "<cmd>Leet list<CR>", opts)
-  vim.keymap.set("n", "<leader>ld", "<cmd>Leet desc<CR>", opts)
-  vim.keymap.set("n", "<leader>ls", "<cmd>Leet submit<CR>", opts)
-  vim.keymap.set("n", "<leader>lr", "<cmd>Leet run<CR>", opts)
-  vim.keymap.set("n", "<leader>lg", "<cmd>Leet lang<CR>", opts)
-  vim.keymap.set("n", "<leader>lc", "<cmd>Leet code<CR>", opts)
-  vim.keymap.set("n", "<leader>lb", "<cmd>Leet browser<CR>", opts)
 end
 
 return {
