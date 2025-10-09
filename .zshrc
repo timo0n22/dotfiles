@@ -1,6 +1,7 @@
 # Environment
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/dotfiles/note-scripts"
 export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
 export EDITOR=nvim
@@ -32,6 +33,11 @@ alias v="nvim"
 alias t="tmux"
 alias f="fzf --preview 'bat --style=numbers --color=always {}'"
 alias ls="ls --color=auto"
+alias ll="ls -l"
+alias la="ls -a"
+alias nf="new-note fleeting"
+alias nl="lang-note"
+alias d="daily"
 
 # Zinit plugin manager
 if [[ ! -f ~/.zinit/bin/zinit.zsh ]]; then
