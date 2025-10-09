@@ -1,0 +1,43 @@
+#!/bin/bash
+# new-note - Create new zettelkasten note
+
+NOTES_DIR="$HOME/notes"
+TYPE=${1:-permanent}  # fleeting, literature, permanent
+TITLE="$2"
+
+if [ -z "$TITLE" ]; then
+    read -p "Note title: " TITLE
+fi
+
+# Generate ID (timestamp)
+ID=$(date +%Y%m%d%H%M)
+FILENAME="${ID}-${TITLE// /-}.md"
+FILEPATH="$NOTES_DIR/$TYPE/$FILENAME"
+
+# Create note with template
+cat > "$FILEPATH" << EOF
+# $TITLE
+
+ID: $ID
+Created: $(date '+%Y-%m-%d %H:%M')
+Tags: #
+Links: 
+
+---
+
+## Summary
+
+
+
+## Details
+
+
+
+## Related
+- 
+
+---
+Source: 
+EOF
+
+nvim "$FILEPATH"

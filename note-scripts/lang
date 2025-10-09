@@ -1,0 +1,76 @@
+#!/bin/bash
+# lang - Language learning note
+
+NOTES_DIR="$HOME/notes/languages"
+LANG=${1:-english}  # english, japanese
+TYPE=${2:-vocabulary}  # vocabulary, grammar
+
+mkdir -p "$NOTES_DIR/$LANG/$TYPE"
+
+ID=$(date +%Y%m%d%H%M)
+read -p "Word/Topic: " WORD
+
+FILE="$NOTES_DIR/$LANG/$TYPE/${ID}-${WORD// /-}.md"
+
+if [ "$TYPE" = "vocabulary" ]; then
+    cat > "$FILE" << EOF
+# $WORD
+
+ID: $ID
+Language: $LANG
+Level: 
+Tags: #$LANG #vocabulary
+
+---
+
+## Translation
+
+
+## Usage Examples
+1. 
+2. 
+3. 
+
+## My sentence
+
+
+## Context (where I found it)
+
+
+## Related words
+- 
+
+## Mnemonics
+
+
+EOF
+else
+    cat > "$FILE" << EOF
+# $WORD
+
+ID: $ID
+Language: $LANG
+Tags: #$LANG #grammar
+
+---
+
+## Rule
+
+
+## Examples
+1. 
+2. 
+
+## My practice sentences
+
+
+## Common mistakes
+
+
+## Related
+- 
+
+EOF
+fi
+
+nvim "$FILE"
