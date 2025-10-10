@@ -38,6 +38,7 @@ alias la="ls -a"
 alias nf="new-note fleeting"
 alias nl="lang-note"
 alias d="daily"
+alias k="kubectl"
 
 # Zinit plugin manager
 if [[ ! -f ~/.zinit/bin/zinit.zsh ]]; then
