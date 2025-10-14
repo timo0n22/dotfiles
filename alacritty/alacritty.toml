@@ -2,15 +2,31 @@
 startup_mode = "Maximized"
 title = ""
 decorations = "Buttonless"
-opacity = 8
+opacity = 0.95
 
-[general]
-import = [
-    "~/.config/alacritty/themes/themes/rose_pine_moon.toml"
-]
+[colors.primary]
+background = "#282828"
+foreground = "#d4be98"
 
-[colors]
-primary = { background = "#040404" }
+[colors.normal]
+black   = "#32302f"
+red     = "#ea6962"
+green   = "#a9b665"
+yellow  = "#d8a657"
+blue    = "#7daea3"
+magenta = "#d3869b"
+cyan    = "#89b482"
+white   = "#d4be98"
+
+[colors.bright]
+black   = "#5a524c"
+red     = "#ea6962"
+green   = "#a9b665"
+yellow  = "#d8a657"
+blue    = "#7daea3"
+magenta = "#d3869b"
+cyan    = "#89b482"
+white   = "#ddc7a1"
 
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular"}

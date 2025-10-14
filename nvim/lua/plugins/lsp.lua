@@ -1,7 +1,10 @@
 return {
   "neovim/nvim-lspconfig",
   config = function()
-    require("lspconfig").gopls.setup({
+    local lspconfig = require("lspconfig")
+
+    -- Go
+    lspconfig.gopls.setup({
       settings = {
         gopls = {
           analyses = {
@@ -11,7 +14,9 @@ return {
         },
       },
     })
-    require("lspconfig").lua_ls.setup({
+
+    -- Lua
+    lspconfig.lua_ls.setup({
       settings = {
         Lua = {
           diagnostics = {
@@ -25,5 +30,30 @@ return {
         },
       },
     })
-  end
+
+    -- YAML
+    lspconfig.yamlls.setup({
+      settings = {
+        yaml = {
+          schemas = {
+            ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+            ["https://json.schemastore.org/kustomization.json"] = "kustomization.yaml",
+          },
+        },
+      },
+    })
+
+    -- JSON
+    lspconfig.jsonls.setup({
+      settings = {
+        json = {
+          schemas = require("schemastore").json.schemas(),
+          validate = { enable = true },
+        },
+      },
+    })
+  end,
+  dependencies = {
+    "b0o/schemastore.nvim", -- JSON schemas for jsonls
+  },
 }

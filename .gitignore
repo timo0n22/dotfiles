@@ -1,3 +1,10 @@
 nvim/lazy-lock.json
 *.swp
 *.tmp
+
+# Claude Code files
+.claude/
+CLAUDE.md
+
+# Personal note-taking scripts
+note-scripts/

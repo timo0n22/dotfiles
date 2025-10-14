@@ -14,6 +14,16 @@ return {
 
     telescope.setup({
       defaults = {
+        layout_strategy = "horizontal",
+        layout_config = {
+          horizontal = {
+            preview_width = 0.55,
+            results_width = 0.45,
+          },
+          width = 0.95,
+          height = 0.90,
+          preview_cutoff = 120,
+        },
         mappings = {
           i = {
             ["<Esc>"] = actions.close,

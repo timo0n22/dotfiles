@@ -3,26 +3,8 @@ return {
   config = function()
     require("nvim-tree").setup({
       view = {
-        float = {
-          enable = true,
-          quit_on_focus_loss = true,
-          open_win_config = function()
-            -- Nearly full screen (no border)
-            local width = math.floor(vim.o.columns * 0.7) -- 98% width
-            local height = math.floor(vim.o.lines * 0.7) -- 95% height
-            return {
-              relative = "editor",
-              border = "none", -- ⬅️ no border
-              width = width,
-              height = height,
-              col = math.floor((vim.o.columns - width) / 2),
-              row = math.floor((vim.o.lines - height) / 2),
-            }
-          end,
-        },
-        width = function()
-          return math.floor(vim.o.columns * 0.8)
-        end,
+        side = "left",
+        width = 35,
       },
       renderer = {
         highlight_git = true,

@@ -11,7 +11,7 @@ export CLICOLOR=1
 export LSCOLORS="ExGxFxdaCxDaDahbadacec"
 
 # Simple and clean prompt
-PROMPT='%F{blue}%1~%f %# '
+PROMPT='%F{#7daea3}%1~%f %# '
 
 # History settings
 HISTFILE=~/.zsh_history
@@ -51,14 +51,14 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 
-# Syntax highlighting colors (Kanagawa theme)
+# Syntax highlighting colors (Gruvbox Material)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[default]='fg=#dcd7ba'
-ZSH_HIGHLIGHT_STYLES[command]='fg=#7e9cd8'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=#c0a36e'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=#957fb8'
-ZSH_HIGHLIGHT_STYLES[path]='fg=#98bb6c'
+ZSH_HIGHLIGHT_STYLES[default]='fg=#d4be98'
+ZSH_HIGHLIGHT_STYLES[command]='fg=#7daea3'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#d8a657'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#d3869b'
+ZSH_HIGHLIGHT_STYLES[path]='fg=#a9b665'
 
 # Completions
 autoload -Uz compinit
