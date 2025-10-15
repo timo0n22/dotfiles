@@ -1,5 +1,13 @@
 # ~/.aerospace.toml
 
+# Gaps between windows
+gaps.inner.horizontal = 12
+gaps.inner.vertical = 12
+gaps.outer.left = 12
+gaps.outer.bottom = 12
+gaps.outer.top = 12
+gaps.outer.right = 12
+
 [mode.main.binding]
 # Switch workspaces 1–9
 "alt-1" = "workspace 1"

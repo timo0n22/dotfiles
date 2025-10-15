@@ -1,10 +1,11 @@
 return {
   "neovim/nvim-lspconfig",
   config = function()
-    local lspconfig = require("lspconfig")
-
     -- Go
-    lspconfig.gopls.setup({
+    vim.lsp.config.gopls = {
+      cmd = { "gopls" },
+      filetypes = { "go", "gomod", "gowork", "gotmpl" },
+      root_markers = { "go.work", "go.mod", ".git" },
       settings = {
         gopls = {
           analyses = {
@@ -13,10 +14,14 @@ return {
           staticcheck = true,
         },
       },
-    })
+    }
+    vim.lsp.enable("gopls")
 
     -- Lua
-    lspconfig.lua_ls.setup({
+    vim.lsp.config.lua_ls = {
+      cmd = { "lua-language-server" },
+      filetypes = { "lua" },
+      root_markers = { ".luarc.json", ".luarc.jsonc", ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml", ".git" },
       settings = {
         Lua = {
           diagnostics = {
@@ -29,10 +34,14 @@ return {
           telemetry = { enable = false },
         },
       },
-    })
+    }
+    vim.lsp.enable("lua_ls")
 
     -- YAML
-    lspconfig.yamlls.setup({
+    vim.lsp.config.yamlls = {
+      cmd = { "yaml-language-server", "--stdio" },
+      filetypes = { "yaml", "yaml.docker-compose", "yaml.gitlab" },
+      root_markers = { ".git" },
       settings = {
         yaml = {
           schemas = {
@@ -41,17 +50,22 @@ return {
           },
         },
       },
-    })
+    }
+    vim.lsp.enable("yamlls")
 
     -- JSON
-    lspconfig.jsonls.setup({
+    vim.lsp.config.jsonls = {
+      cmd = { "vscode-json-language-server", "--stdio" },
+      filetypes = { "json", "jsonc" },
+      root_markers = { ".git" },
       settings = {
         json = {
           schemas = require("schemastore").json.schemas(),
           validate = { enable = true },
         },
       },
-    })
+    }
+    vim.lsp.enable("jsonls")
   end,
   dependencies = {
     "b0o/schemastore.nvim", -- JSON schemas for jsonls
