@@ -61,7 +61,7 @@ local function setup_keymaps()
   vim.keymap.set("n", "<leader>f", function() lsp.buf.format({ async = true }) end, { desc = "Format file" })
 
   -- NvimTree
-  vim.keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>", { desc = "Toggle file tree" })
+  vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>", { desc = "Toggle file tree" })
   vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>", { desc = "Refresh file tree" })
 
 end
