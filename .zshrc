@@ -63,3 +63,4 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=#a9b665'
 # Completions
 autoload -Uz compinit
 compinit
+export PATH=/opt/homebrew/bin:$PATH
