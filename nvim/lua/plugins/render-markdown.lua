@@ -10,16 +10,20 @@ return {
       enabled = true,
       -- Maximum file size (in MB) that will be rendered
       max_file_size = 10.0,
-      -- Headings
-      headings = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
-      -- Bullets for unordered lists
-      bullets = { "●", "○", "◆", "◇" },
-      -- Checkboxes
+      heading = {
+        icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
+      },
+      bullet = {
+        icons = { "●", "○", "◆", "◇" },
+      },
       checkbox = {
-        unchecked = "󰄱 ",
-        checked = "󰄲 ",
+        unchecked = { icon = "󰄱 " },
+        checked = { icon = "󰄲 " },
       },
       -- Code blocks
+      html = { enabled = false },
+      latex = { enabled = false },
+      yaml = { enabled = false },
       code = {
         -- Highlight code blocks
         enabled = true,

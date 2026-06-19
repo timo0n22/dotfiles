@@ -1,16 +1,19 @@
 return {
-  "sainnhe/gruvbox-material",
+  "catppuccin/nvim",
+  name = "catppuccin",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.g.gruvbox_material_background = 'medium'
-    vim.g.gruvbox_material_foreground = 'material'
-    vim.g.gruvbox_material_disable_italic_comment = 1
-    vim.g.gruvbox_material_enable_bold = 0
-    vim.g.gruvbox_material_enable_italic = 0
-    vim.g.gruvbox_material_transparent_background = 1
-    vim.g.gruvbox_material_better_performance = 1
-
-    vim.cmd [[colorscheme gruvbox-material]]
+    require("catppuccin").setup({
+      flavour = "mocha",
+      transparent_background = true,
+      integrations = {
+        treesitter = true,
+        telescope = { enabled = true },
+        nvim_tree = true,
+        cmp = true,
+      },
+    })
+    vim.cmd.colorscheme("catppuccin")
   end,
 }

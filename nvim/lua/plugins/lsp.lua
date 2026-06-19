@@ -53,6 +53,14 @@ return {
     }
     vim.lsp.enable("yamlls")
 
+    -- Solidity
+    vim.lsp.config.solc = {
+      cmd = { "solc", "--lsp" },
+      filetypes = { "solidity" },
+      root_markers = { "hardhat.config.js", "hardhat.config.ts", "foundry.toml", "truffle-config.js", ".git" },
+    }
+    vim.lsp.enable("solc")
+
     -- JSON
     vim.lsp.config.jsonls = {
       cmd = { "vscode-json-language-server", "--stdio" },

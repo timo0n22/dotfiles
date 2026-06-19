@@ -1,35 +1,84 @@
-# ~/.aerospace.toml
+start-at-login = true
 
-# Gaps between windows
-gaps.inner.horizontal = 12
-gaps.inner.vertical = 12
-gaps.outer.left = 12
-gaps.outer.bottom = 12
-gaps.outer.top = 12
-gaps.outer.right = 12
+after-startup-command = [
+  'exec-and-forget borders active_color=0xff74c7ec inactive_color=0xffcba6f7 width=6.0 hidpi=on'
+]
+
+exec-on-workspace-change = ['/bin/bash', '-c',
+  'sketchybar --trigger space_change; sketchybar --trigger space_windows_change'
+]
+
+[gaps]
+inner.horizontal = 12
+inner.vertical = 12
+outer.left = 12
+outer.bottom = 12
+outer.top = 8
+outer.right = 12
 
 [mode.main.binding]
-# Switch workspaces 1–9
-"alt-1" = "workspace 1"
-"alt-2" = "workspace 2"
-"alt-3" = "workspace 3"
-"alt-4" = "workspace 4"
-"alt-5" = "workspace 5"
-"alt-6" = "workspace 6"
-"alt-7" = "workspace 7"
-"alt-8" = "workspace 8"
-"alt-9" = "workspace 9"
+# Focus
+cmd-h = 'focus left'
+cmd-j = 'focus down'
+cmd-k = 'focus up'
+cmd-l = 'focus right'
 
-# Move focused window and follow it
-"shift-alt-1" = "move-node-to-workspace 1"
-"shift-alt-2" = "move-node-to-workspace 2"
-"shift-alt-3" = "move-node-to-workspace 3"
-"shift-alt-4" = "move-node-to-workspace 4"
-"shift-alt-5" = "move-node-to-workspace 5"
-"shift-alt-6" = "move-node-to-workspace 6"
-"shift-alt-7" = "move-node-to-workspace 7"
-"shift-alt-8" = "move-node-to-workspace 8"
-"shift-alt-9" = "move-node-to-workspace 9"
+# Move windows
+ctrl-cmd-h = 'move left'
+ctrl-cmd-j = 'move down'
+ctrl-cmd-k = 'move up'
+ctrl-cmd-l = 'move right'
+
+# Resize
+ctrl-shift-h = 'resize width -50'
+ctrl-shift-j = 'resize height +50'
+ctrl-shift-k = 'resize height -50'
+ctrl-shift-l = 'resize width +50'
+
+# Balance sizes
+cmd-shift-0 = 'balance-sizes'
+
+# Fullscreen (native macOS)
+ctrl-cmd-enter = 'fullscreen'
+
+# Float toggle
+ctrl-cmd-t = 'layout floating tiling'
+
+# Layout
+cmd-f = 'layout floating'
+cmd-g = 'layout tiles'
+
+# Split direction
+cmd-shift-v = 'layout tiles vertical'
+cmd-shift-s = 'layout tiles horizontal'
+
+# Open terminal
+cmd-enter = 'exec-and-forget open -n -a "Alacritty"'
+
+# Open browser
+cmd-shift-enter = 'exec-and-forget open -n -a "Zen"'
+
+# Switch workspaces
+cmd-1 = 'workspace 1'
+cmd-2 = 'workspace 2'
+cmd-3 = 'workspace 3'
+cmd-4 = 'workspace 4'
+cmd-5 = 'workspace 5'
+cmd-6 = 'workspace 6'
+cmd-7 = 'workspace 7'
+cmd-8 = 'workspace 8'
+cmd-9 = 'workspace 9'
+
+# Move window to workspace and follow
+cmd-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
+cmd-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
+cmd-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
+cmd-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
+cmd-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
+cmd-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
+cmd-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
+cmd-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
+cmd-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 
 [[on-window-detected]]
 if.app-id = "com.apple.finder"
@@ -56,6 +105,10 @@ if.app-id = "org.mozilla.firefox"
 run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
+if.app-id = "io.zen.browser"
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
 if.app-id = "ru.keepcoder.Telegram"
 run = "move-node-to-workspace 5"
 
@@ -66,3 +119,15 @@ run = "move-node-to-workspace 2"
 [[on-window-detected]]
 if.app-id = "com.microsoft.VSCode"
 run = "move-node-to-workspace 2"
+
+[[on-window-detected]]
+if.app-id = "com.apple.systempreferences"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.calculator"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "net.shinyfrog.shottr"
+run = "layout floating"

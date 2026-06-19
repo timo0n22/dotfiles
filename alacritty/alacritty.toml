@@ -5,32 +5,40 @@ decorations = "Buttonless"
 opacity = 0.88
 
 [colors.primary]
-background = "#282828"
-foreground = "#d4be98"
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[colors.cursor]
+text   = "#1e1e2e"
+cursor = "#f5e0dc"
+
+[colors.selection]
+text       = "#1e1e2e"
+background = "#f5e0dc"
 
 [colors.normal]
-black   = "#32302f"
-red     = "#ea6962"
-green   = "#a9b665"
-yellow  = "#d8a657"
-blue    = "#7daea3"
-magenta = "#d3869b"
-cyan    = "#89b482"
-white   = "#d4be98"
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
 
 [colors.bright]
-black   = "#5a524c"
-red     = "#ea6962"
-green   = "#a9b665"
-yellow  = "#d8a657"
-blue    = "#7daea3"
-magenta = "#d3869b"
-cyan    = "#89b482"
-white   = "#ddc7a1"
+black   = "#585b70"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#f5c2e7"
+cyan    = "#94e2d5"
+white   = "#a6adc8"
 
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular"}
-size = 28
+size = 18
 
 [env]
 TERM = "tmux-256color"
