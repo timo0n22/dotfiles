@@ -26,6 +26,7 @@ export PATH="$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 # Aliases — editor
 alias vim='nvim'
 alias vi='nvim'
+alias v='nvim .'
 
 # Aliases — ls/eza
 alias ls="eza --icons=always --color=always"
@@ -64,6 +65,7 @@ alias tn="tmux new -s"
 alias grep="grep --color=auto"
 alias ..="cd .."
 alias ...="cd ../.."
+alias yy="yt-dlp -x --audio-format mp3"
 
 # FZF
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git --exclude node_modules --exclude .cache"
@@ -99,3 +101,4 @@ source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-sy
 # Powerlevel10k
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias python=python3
