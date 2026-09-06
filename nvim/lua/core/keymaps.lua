@@ -32,7 +32,7 @@ local function setup_keymaps()
 
   -- Telescope
   vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
-  vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Live grep" })
+  vim.keymap.set("n", "<leader><leader>", ":Telescope live_grep<CR>", { desc = "Live grep" })
   vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Find buffers" })
   vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>", { desc = "Help tags" })
   vim.keymap.set("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", { desc = "Find symbols" })
