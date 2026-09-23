@@ -50,9 +50,7 @@ alias gst="git status"
 alias glog="git log --oneline --graph --decorate"
 alias gd="git diff"
 
-# Aliases — yabai/skhd/sketchybar
-alias ystart="yabai --start-service"
-alias ystop="yabai --stop-service"
+# Aliases — sketchybar
 alias skstart="brew services start sketchybar"
 alias skstop="brew services stop sketchybar"
 
