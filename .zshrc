@@ -100,3 +100,20 @@ source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-sy
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias python=python3
+
+# yt — тумблер домашней блокировки YouTube на Orange Pi (скрипт /usr/local/sbin/yt-toggle.sh)
+#   yt        → статус всех трёх слоёв (dnsmasq / iptables / sing-box)
+#   yt on     → разблокировать
+#   yt off    → заблокировать обратно
+yt() {
+  local h host
+  for h in 192.168.50.1 192.168.0.108; do
+    nc -z -w1 "$h" 22 2>/dev/null && { host=$h; break }
+  done
+  if [[ -z $host ]]; then
+    print -u2 "yt: Orange Pi недоступна (пробовал 192.168.50.1 и 192.168.0.108)"
+    return 1
+  fi
+  ssh -t -i ~/.ssh/id_ed25519 -o ConnectTimeout=10 "orangepi@$host" \
+    "sudo /usr/local/sbin/yt-toggle.sh ${1:-status}"
+}
