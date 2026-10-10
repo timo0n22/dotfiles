@@ -2,39 +2,40 @@
 startup_mode = "Maximized"
 title = ""
 decorations = "Buttonless"
-opacity = 0.88
+opacity = 0.8
 
+# Kanagawa Wave
 [colors.primary]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+background = "#1f1f28"
+foreground = "#dcd7ba"
 
 [colors.cursor]
-text   = "#1e1e2e"
-cursor = "#f5e0dc"
+text   = "#1f1f28"
+cursor = "#c8c093"
 
 [colors.selection]
-text       = "#1e1e2e"
-background = "#f5e0dc"
+text       = "#c8c093"
+background = "#2d4f67"
 
 [colors.normal]
-black   = "#45475a"
-red     = "#f38ba8"
-green   = "#a6e3a1"
-yellow  = "#f9e2af"
-blue    = "#89b4fa"
-magenta = "#f5c2e7"
-cyan    = "#94e2d5"
-white   = "#bac2de"
+black   = "#090618"
+red     = "#c34043"
+green   = "#76946a"
+yellow  = "#c0a36e"
+blue    = "#7e9cd8"
+magenta = "#957fb8"
+cyan    = "#6a9589"
+white   = "#c8c093"
 
 [colors.bright]
-black   = "#585b70"
-red     = "#f38ba8"
-green   = "#a6e3a1"
-yellow  = "#f9e2af"
-blue    = "#89b4fa"
-magenta = "#f5c2e7"
-cyan    = "#94e2d5"
-white   = "#a6adc8"
+black   = "#727169"
+red     = "#e82424"
+green   = "#98bb6c"
+yellow  = "#e6c384"
+blue    = "#7fb4ca"
+magenta = "#938aa9"
+cyan    = "#7aa89f"
+white   = "#dcd7ba"
 
 [font]
 normal = { family = "Hack Nerd Font Mono", style = "Regular"}

@@ -1,19 +1,13 @@
 return {
-  "catppuccin/nvim",
-  name = "catppuccin",
+  "rebelot/kanagawa.nvim",
   lazy = false,
   priority = 1000,
   config = function()
-    require("catppuccin").setup({
-      flavour = "mocha",
-      transparent_background = true,
-      integrations = {
-        treesitter = true,
-        telescope = { enabled = true },
-        nvim_tree = true,
-        cmp = true,
-      },
+    require("kanagawa").setup({
+      transparent = true,
+      background = { light = "lotus", dark = "wave" },
     })
-    vim.cmd.colorscheme("catppuccin")
+    vim.o.background = "dark" -- "light" для светлой Kanagawa Lotus
+    vim.cmd.colorscheme("kanagawa")
   end,
 }
