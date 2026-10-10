@@ -108,7 +108,7 @@ run = "move-node-to-workspace 4"
 
 [[on-window-detected]]
 if.app-id = "ru.keepcoder.Telegram"
-run = "move-node-to-workspace 5"
+run = "move-node-to-workspace 7"
 
 [[on-window-detected]]
 if.app-id = "com.electron.dockerdesktop"
@@ -117,6 +117,18 @@ run = "move-node-to-workspace 7"
 [[on-window-detected]]
 if.app-id = "com.microsoft.VSCode"
 run = "move-node-to-workspace 2"
+
+[[on-window-detected]]
+if.app-id = "net.ankiweb.anki"
+run = "move-node-to-workspace 1"
+
+[[on-window-detected]]
+if.app-id = "io.caido.Caido"
+run = "move-node-to-workspace 2"
+
+[[on-window-detected]]
+if.app-id = "com.anthropic.claudefordesktop"
+run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
 if.app-id = "com.apple.systempreferences"
